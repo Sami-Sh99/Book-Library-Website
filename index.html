@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./main.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+</head>
+<body ng-app='MyApp'>
+
+<div class="container-fluid" ng-Controller="MainController">
+  <h1>Basic Library Structure</h1>
+  <p>Resize the browser window to see the effect.</p>
+  <p>Book Shop</p>
+  <div class="container-fluid">
+    <div class="row" >
+      <div ng-repeat="Book in Books" class="col-sm-2 card">
+        <img class="cover" src="/js/Controller/{{Book.image }}">
+        <div class="description">
+            <p> <h4 class="title">{{Book.BookTitle}}</h4>
+                <span class="author">{{Book.Author}}</span>
+                <br>
+                <span class="Publisher">{{Book.Publisher}}</span>
+                <br>
+                <span class="PubDate">{{Book.PublishDate}}</span>
+                <br>
+                <span class="Price">{{Book.Price}}</span>
+            </p>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Modules -->
+<script src="js/app.js"></script>
+<!-- Controllers -->
+<script src="js/Controller/MainController.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+    background-image: url(/js/Controller/img/bg.jpg);
+  }
+  
+  
+  header {
+    background: #563d7c;
+    padding: 2em 1em;
+    color: #fff;
+    margin-bottom: 2em;
+  }
+  header h1 {
+    font-weight: 10px;
+  }
+  
+  .card {
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+     width: 100px;
+    height: 100%; 
+    /* box-shadow: 0 0 20px #aaa; */
+    margin: 10px 0px 10px 10px;
+    padding: 10px 10px 0 10px;
+    vertical-align: top;
+    transition: height 1s;
+  }
+  .cover{
+    /* 109 x 153 */
+      height: 50%;
+      width: 100%;
+      margin: auto;
+      display: inline-block;
+  }
+h4{
+      font-size: 15px;
+  }
+  .author{
+      font-style: italic;
+      font-size: 10px;
+  }
+  .Publisher{
+    font-size: 10px;
+  }
+  .PubDate{
+    font-size: 10px;
+  }
+  .Price{
+      background-color: chocolate;
+      color: beige;
+      float: right;
+      border-radius: 15%;
+      margin-bottom: 5px; 
+      padding: 5px;
+  }
