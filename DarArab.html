@@ -12,7 +12,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="js/Searchbox.js"></script>
   <!-- Custom CSS & JS -->
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
   <link rel="stylesheet" href="./main.css">
   <script src="./js/Searchbox.js"></script>
   <!-- Angular -->
@@ -23,10 +22,10 @@
 
 <!-- NavBar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-    <a class="navbar-brand" href="#">
-        <img src="./js/Controller/img/Brand3.png" class="d-inline-block align-top" width="30px" height="30px" alt="">
-      <b style="color:#B48050; font-family:DroidArabicKufiRegular ">كلمات 5</b>
-      </a>
+  <a class="navbar-brand" href="./index.html">
+    <img src="./js/Controller/img/Brand3.png" class="d-inline-block align-top" width="30px" height="30px" alt="">
+  <b style="color:#B48050; font-family:DroidArabicKufiRegular ">كلمات 5</b>
+  </a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,7 +35,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link " href="./index.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./Announcements.html">Announcements</a>
@@ -46,7 +45,7 @@
           Categories
         </a>
         <div class="dropdown-menu" >
-          <a class="dropdown-item" href="baa.html">مركز باء</a>
+          <a class="dropdown-item" href="#">مركز باء</a>
           <a class="dropdown-item" href="#">Science Fiction</a>
           <a class="dropdown-item" href="#">Westerns</a>
           <a class="dropdown-item" href="#">Romance</a>
@@ -56,46 +55,41 @@
           <a class="dropdown-item" href="#">Dystopia</a>
         </div>
       </li>
-      <!-- <li class="nav-item">
+      <li class="nav-item">
           <form class="form-inline ">
               <div class="flexbox">
                   <div class="search">
                     <div> 
-                      <input id="myInput" class="autocomplete" type="text" placeholder="Search . . ." required>
+                      <input id="myInput"  ng-model="searchString" class="autocomplete" type="text" placeholder="Search . . ." required>
                     </div>
                   </div>
                 </div>
             </form>
-      </li> -->
+      </li>
     </ul>
   </div>
 </nav>
 <!-- -- -->
-<div class="container-fluid" ng-Controller="MainController">
-  <h5 class="PubTitle">أهلًا بكم في معرض الكتاب السنوي في كلية العلوم - مجلس طلاب الفرع</h5>
 
-    <div ng-repeat="Library in Libraries"> 
-      <div class="row">
-        <div class="BTitle">{{Library.Title}}</div>
-        <div class="HorizontalScroll">
-        <div ng-repeat="i in getNumber(number)" class="col-sm-3 col-5 col-md-2 horiz ">
-          <img class="cover" src="{{Library.Books[i].image }}">
-          <div class="description">
-              <p> <h4 class="title">{{Library.Books[i].BookTitle}}</h4>
-                  <span class="author">{{Library.Books[i].Author}}</span>
-                  <br>
+<div class="container-fluid" ng-Controller="DarArab">
+  <h1 class="PubTitle"> الدار العربية للعلوم الناشرون </h1>
 
-                  <span class="PubDate">{{Library.Books[i].PublishDate}}</span>
-                  <br>
-                  <!-- <span class="Price">{{Library.Books[i].Price}}</span> -->
-              </p>
-            </div>
-          </div>
-         <a href="{{Library.Link}}"> <button class="More">More</button> </a>
-      </div>
-    <!-- </div> -->
-</div>
-</div>
+  <div class="container-fluid">
+    <div class="row" >
+      <div ng-model="searchString" ng-repeat="Book in Books | searchFor:searchString" class="col-sm-3 col-5 col-md-2 card">
+        <img class="cover" alt="Not Found" src="{{Book.image }}">
+        <div class="description">
+            <p> <h4 class="title">{{Book.BookTitle}}</h4>
+                <span class="author">{{Book.Author}}</span>
+                <br>
+                <span class="PubDate">{{Book.PublishDate}}</span>
+                <br>
+                <span class="Price">{{Book.Price}}</span>
+                <br>
+            </p>
+        </div>
+    </div>
+  </div>
 </div>
 <!-- Top Button -->
 <button onclick="topFunction()" id="Top" title="Go to top">
@@ -105,12 +99,8 @@
 <!-- Modules -->
 <script src="js/app.js"></script>
 <!-- Controllers -->
-<script src="js/Controller/MainController.js"></script>
+<script src="js/Controller/DarArab-Ctrl.js"></script>
 <!-- Search Listener -->
 <script>autocomplete(document.getElementById("myInput"), countries);</script>
-<div class="footer">
-  Designed by :<br> Sami Shames El-Deen, Jad Mrad
-</div>
-
 </body>
 </html>
