@@ -81,9 +81,18 @@ body {
   float: left; */
 }
 
+.search-box{
+  text-align: left;
+  padding-left: 1em;
+  background-color: #6c757d;
+  border-radius: 15px;
+  color:#f8f9fa;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
 .search > div {
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
 }
 
