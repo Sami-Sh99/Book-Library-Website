@@ -197,6 +197,9 @@ input[type=submit] {
   white-space: nowrap;
   margin: auto;
   margin-bottom: 15px;
+  margin-left: 1%;  
+  margin-right: 1%; 
+  border-radius: 10px;
   padding: 30px;
 }
   .card {
@@ -214,12 +217,13 @@ input[type=submit] {
     display: inline-block;
     background: #fff;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(250, 250, 250, 0.1);
     width: 150px;
     height: 250px;
     overflow: hidden; 
     white-space: normal;
-    /* box-shadow: 0 0 20px #aaa; */
+    border-radius: 1%;
+    /* box-shadow: 0 0 20px #aaa;  */
     margin: 10px 0px 10px 10px;
     padding: 10px 10px 0 10px;
   }
@@ -240,14 +244,12 @@ h4{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding:10px;
+    padding-bottom: 5px;
+    padding-top: 0px;
     color: gold;
     font-weight: bold;
     font-size: 2rem;
     text-align:left;
-    /*   */
-  }
-  .title{
-    /* display: inline-block; */
   }
   .author{
       font-style: italic;
@@ -292,3 +294,12 @@ h4{
   background-color: #555; /* Add a dark-grey background on hover */
 }
 /* -- */
+.footer{
+  background-color: #6c757d;
+  color: rgba(255,255,255,.5);
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Uni Library</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/Searchbox.js"></script>
+  <!-- Custom CSS & JS -->
+  <link rel="stylesheet" href="./main.css">
+  <script src="./js/Searchbox.js"></script>
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+</head>
+<body ng-app='MyApp'>
+
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <a class="navbar-brand" href="./index.html">
+    <img src="./js/Controller/img/Brand3.png" class="d-inline-block align-top" width="30px" height="30px" alt="">
+  <b style="color:#B48050; font-family:DroidArabicKufiRegular ">كلمات 5</b>
+  </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link " href="./index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./Announcements.html">Announcements</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" >
+          <a class="dropdown-item" href="#">مركز باء</a>
+          <a class="dropdown-item" href="#">Science Fiction</a>
+          <a class="dropdown-item" href="#">Westerns</a>
+          <a class="dropdown-item" href="#">Romance</a>
+          <a class="dropdown-item" href="#">Thriller</a>
+          <a class="dropdown-item" href="#">Mystery</a>
+          <a class="dropdown-item" href="#">Detective story</a>
+          <a class="dropdown-item" href="#">Dystopia</a>
+        </div>
+      </li>
+      <li class="nav-item">
+          <form class="form-inline ">
+              <div class="flexbox">
+                  <div class="search">
+                    <div> 
+                      <input id="myInput" class="autocomplete" type="text" placeholder="Search . . ." required>
+                    </div>
+                  </div>
+                </div>
+            </form>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- -- -->
+
+<div class="container-fluid" ng-Controller="Maliks">
+  <h1 class="PubTitle">Maliks</h1>
+
+  <div class="container-fluid">
+    <div class="row" >
+      <div ng-repeat="Book in Books" class="col-sm-3 col-5 col-md-2 card">
+        <img class="cover" src="{{Book.image }}">
+        <div class="description">
+            <p> <h4 class="title">{{Book.BookTitle}}</h4>
+                <!-- <span class="author">{{Book.Author}}</span> -->
+                <br>
+                <!-- <span class="PubDate">{{Book.PublishDate}}</span> -->
+                <br>
+                <span class="Price">{{Book.Price}}</span>
+                <br>
+            </p>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Top Button -->
+<button onclick="topFunction()" id="Top" title="Go to top">
+  <img src="./js/Controller/img/top.png" height="20px" width="23px">
+</button>
+
+<!-- Modules -->
+<script src="js/app.js"></script>
+<!-- Controllers -->
+<script src="js/Controller/Maliks-Ctrl.js"></script>
+<!-- Search Listener -->
+<script>autocomplete(document.getElementById("myInput"), countries);</script>
+</body>
+</html>

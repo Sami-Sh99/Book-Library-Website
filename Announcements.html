@@ -21,26 +21,31 @@
 <body ng-app='MyApp'>
 
 <!-- NavBar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">معرض الكتاب</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <a class="navbar-brand" href="./index.html">
+    <img src="./js/Controller/img/Brand3.png" class="d-inline-block align-top" width="30px" height="30px" alt="">
+  <b style="color:#B48050; font-family:DroidArabicKufiRegular ">كلمات 5</b>
+  </a>
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
+
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link " href="./index.html">Home</a>
-      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="./Announcements.html">Announcements<span class="sr-only">(current)</span></a>
+        <a class="nav-link " href="./index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./Announcements.html">Announcements</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Categories
         </a>
         <div class="dropdown-menu" >
-          <a class="dropdown-item" href="#">Fantasy</a>
+          <a class="dropdown-item" href="#">مركز باء</a>
           <a class="dropdown-item" href="#">Science Fiction</a>
           <a class="dropdown-item" href="#">Westerns</a>
           <a class="dropdown-item" href="#">Romance</a>
@@ -55,7 +60,7 @@
               <div class="flexbox">
                   <div class="search">
                     <div> 
-                      <input type="text" placeholder="Search . . ." required>
+                      <input id="myInput" class="autocomplete" type="text" placeholder="Search . . ." required>
                     </div>
                   </div>
                 </div>
