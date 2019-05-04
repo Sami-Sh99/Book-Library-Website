@@ -76,8 +76,9 @@
   <div class="container-fluid">
     <div class="row" >
       <div ng-model="searchString" ng-repeat="Book in Books | searchFor:searchString" class="col-sm-3 col-5 col-md-2 card">
-        <img class="cover" src="{{Book.image }}">
-        <div class="description">
+        <div ng-if="Book.image !== '' " ><img class="cover" ng-src="{{Book.image }}" onerror="this.src='./js/Controller/img/NULL.jpg'"/></div> 
+        <div ng-if="Book.image == '' " ><img class="cover" src="./js/Controller/img/NULL.jpg"></div> 
+         <div class="description">
             <p> <h4 class="title">{{Book.BookTitle}}</h4>
                 <span class="author">{{Book.Author}}</span>
                 <br>

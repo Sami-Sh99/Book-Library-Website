@@ -150,6 +150,7 @@ body {
 /* Search List */
 .List{
   overflow:hidden;
+  overflow-x: hidden;
   max-height: 200px;
   overflow-y:scroll;
 }
