@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 app.controller('DarArab', ['$scope', function($scope) {
 
     $scope.Books=[
