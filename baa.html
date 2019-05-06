@@ -19,44 +19,46 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
 </head>
 <body ng-app='MyApp'>
-
+    <script>window.setTimeout(function(){document.getElementsByClassName("se-pre-con")[0].style.display="none";},1000)</script>
+    <div class="se-pre-con"></div>
 <!-- NavBar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-  <a class="navbar-brand" href="./index.html">
-    <img src="./js/Controller/img/Brand3.png" class="d-inline-block align-top" width="30px" height="30px" alt="">
-  <b style="color:#B48050; font-family:DroidArabicKufiRegular ">كلمات 5</b>
-  </a>
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <a class="navbar-brand" href="index">
+      <img src="./js/Controller/img/Brand3.png" class="d-inline-block align-top" width="30px" height="30px" alt="">
+    <b style="color:#B48050; font-family:DroidArabicKufiRegular ">كلمات 5</b>
+    </a>
 
-  </button>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link " href="./index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./Announcements.html">Announcements</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Categories
-        </a>
-        <div class="dropdown-menu" >
-          <a class="dropdown-item" href="#">مركز باء</a>
-          <a class="dropdown-item" href="#">Science Fiction</a>
-          <a class="dropdown-item" href="#">Westerns</a>
-          <a class="dropdown-item" href="#">Romance</a>
-          <a class="dropdown-item" href="#">Thriller</a>
-          <a class="dropdown-item" href="#">Mystery</a>
-          <a class="dropdown-item" href="#">Detective story</a>
-          <a class="dropdown-item" href="#">Dystopia</a>
-        </div>
-      </li>
-    </ul>
-  </div>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link " href="index">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="./Announcements">Announcements</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Publishers
+      </a>
+      <div class="dropdown-menu" >
+        <a class="dropdown-item" href="baa">مركز باء</a>
+        <a class="dropdown-item" href="x">شركة المطبوعات للتوزيع والنشر</a>
+        <a class="dropdown-item" href="./DarArab">الدار العربية للعلوم الناشرون</a>
+        <a class="dropdown-item" href="./Mahajaa">دار المحجة البيضاء</a>
+        <a class="dropdown-item" href="Maaref">دار المعارف الإسلامية</a>
+        <a class="dropdown-item" href="Rafidain">دار الرافدين</a>
+      </div>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link " href="feedback">Feedback <span class="sr-only">(current)</span></a>
+    </li>
+  </ul>
+</div>
 </nav>
 <!-- -- -->
 
@@ -76,6 +78,7 @@
   <div class="container-fluid">
     <div class="row" >
       <div ng-model="searchString" ng-repeat="Book in Books | searchFor:searchString" class="col-sm-3 col-5 col-md-2 card">
+        <a href="{{Book.image}}" target="blank" style="  color: #343a40;text-decoration: none;">
         <div ng-if="Book.image !== '' " ><img class="cover" ng-src="{{Book.image }}" onerror="this.src='./js/Controller/img/NULL.jpg'"/></div> 
         <div ng-if="Book.image == '' " ><img class="cover" src="./js/Controller/img/NULL.jpg"></div> 
          <div class="description">
@@ -88,6 +91,7 @@
                 <br>
             </p>
         </div>
+        </a>
     </div>
   </div>
 </div>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Uni Library</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/Searchbox.js"></script>
+  <!-- Custom CSS & JS -->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
+  <link rel="stylesheet" href="./mainx.css">
+  <script src="./js/Searchbox.js"></script>
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+</head>
+<body ng-app='MyApp' class="bg-light">
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <a class="navbar-brand" href="index">
+      <img src="./js/Controller/img/Brand3.png" class="d-inline-block align-top" width="30px" height="30px" alt="">
+    <b style="color:#B48050; font-family:DroidArabicKufiRegular ">كلمات 5</b>
+    </a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link " href="index">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="./Announcements">Announcements</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Publishers
+      </a>
+      <div class="dropdown-menu" >
+        <a class="dropdown-item" href="baa">مركز باء</a>
+        <a class="dropdown-item" href="x">شركة المطبوعات للتوزيع والنشر</a>
+        <a class="dropdown-item" href="./DarArab">الدار العربية للعلوم الناشرون</a>
+        <a class="dropdown-item" href="./Mahajaa">دار المحجة البيضاء</a>
+        <a class="dropdown-item" href="Maaref">دار المعارف الإسلامية</a>
+        <a class="dropdown-item" href="Rafidain">دار الرافدين</a>
+      </div>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link " href="feedback">Feedback <span class="sr-only">(current)</span></a>
+    </li>
+  </ul>
+</div>
+</nav>
+<!-- -- -->
+
+    <div class="container">
+        <div class="py-5 text-center">
+          <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+          <h2>Feedback form</h2>
+          <p class="lead">شكرا لزيارتكم المعرض, نرجو منكم ملأ الاستمارة و ابداء رأيكم</p>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-8 order-md-1">
+            <h3 class="mb-3">Contact Details (Optional)</h3>
+            <form class="needs-validation" novalidate method="POST" action="submit.php">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">First name</label>
+                  <input type="text" class="form-control" id="firstName" name="firstname" placeholder="" value="" >
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Last name</label>
+                  <input type="text" class="form-control" id="lastName" name="lastname" placeholder="" value="" >
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5 justify-content-start mr-auto">
+                    <label for="phoneNumber">Phone number</label>
+                    <input type="text" class="form-control" name="phone" id="phoneNumber" placeholder="" value="" >
+                </div>  
+            </div>
+            <hr class="mb-4">
+            <h4 class="mb-3">Education</h4>
+              <div class="row">
+                <div class="col-md-5 mb-3 mr-auto   ">
+                  <label for="University">University</label>
+                  <input type="text" class="form-control" name="University" id="University" required>
+                  <div class="invalid-feedback">
+                        University required.
+                      </div>
+                </div>
+                <div class="col-md-4 mb-3 mr-auto">
+                  <label for="faculty">Faculty</label>
+                  <input type="text" class="form-control" name="Faculty" id="faculty" required>
+                  <div class="invalid-feedback">
+                        Faculty required.
+                      </div>
+                </div>
+              </div>
+              <h4 class="mb-3">Degree</h4>
+            <div class="custom-control custom-checkbox">
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input id="credit" name="Education" value="Undergraduate" type="radio" class="custom-control-input" checked required>
+                        <label class="custom-control-label" for="credit">Undergraduate</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="debit" name="Education" value="Bachelor" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="debit">Bachelor</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="paypal" name="Education" value="Master" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="paypal">Master</label>
+                    </div>
+                </div>
+            </div>
+              <hr class="mb-4">
+  
+              <h4 class="mb-3">Overall, how entertaining was the Exhibition?</h4>
+  
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                        <div class="custom-control custom-radio">
+                            <input id="Excellent" name="entertaining" type="radio" value="Excellent" class="custom-control-input" checked required>
+                            <label class="custom-control-label text-primary" for="Excellent">Excellent</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="Very Good" name="entertaining" type="radio" value="Very Good" class="custom-control-input" required>
+                            <label class="custom-control-label text-success" for="Very Good">Very Good</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="Good" name="entertaining" type="radio" value="Good" class="custom-control-input" required>
+                            <label class="custom-control-label text-warning" for="Good">Good</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="Not bad" name="entertaining" type="radio" value="Not bad" class="custom-control-input" required>
+                            <label class="custom-control-label text-secondary" for="Not bad">Not bad</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="Bad" name="entertaining" type="radio" value="Bad" class="custom-control-input" required>
+                            <label class="custom-control-label text-danger" for="Bad">Bad</label>
+                        </div>
+                </div>
+              </div>
+              <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"name="comment" rows="3" placeholder="Comment.."></textarea>
+                  </div>
+              <hr class="mb-4">
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script src="../../assets/js/vendor/popper.min.js"></script>
+      <script src="../../dist/js/bootstrap.min.js"></script>
+      <script src="../../assets/js/vendor/holder.min.js"></script>
+      <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+  
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+  
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+      </script>
+    <div class="footer">
+            Designed by :<br> Sami Shames El-Deen, Jad Mrad
+    </div>
+</body>
+</html>
+<!-- SdAa75RsOfEt -->
+<!-- fZQQZQsEnM9A -->

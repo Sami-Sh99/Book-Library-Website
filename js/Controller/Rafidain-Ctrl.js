@@ -4,61 +4,62 @@ app.controller('Rafidain', ['$scope', function($scope) {
       {
         "BookTitle": "ستة رجال وامراة",
         "Price": "$3.50",
-        "image": ""
+        "image": "https://pbs.twimg.com/media/DLhyMCZXkAEW9GP.jpg"
       },
       {
         "BookTitle": "ساحر أوز العجيب",
         "Price": "$5.00",
-        "image": ""
-      },
-      {
-        "BookTitle": "المهابهارتا",
-        "Price": "$6.00",
-        "image": ""
-      },
-      {
-        "BookTitle": "الكافرة",
-        "Price": "$5.00",
-        "image": ""
-      },
-      {
-        "BookTitle": "فلسفة حقوق الانسان",
-        "Price": "$4.00",
-        "image": ""
-      },
-      {
-        "BookTitle": "سيكولوجيا المراهقة",
-        "Price": "$3.50",
-        "image": ""
-      },
-      {
-        "BookTitle": "سيكولوجيا المنقذ",
-        "Price": "$6.00",
-        "image": ""
-      },
-      {
-        "BookTitle": "كافكا الاعمال القصصية",
-        "Price": "$7.00",
-        "image": ""
-      },
-      {
-        "BookTitle": "فاتنة باريس",
-        "Price": "$4.00",
-        "image": ""
-      },
-      {
-        "BookTitle": "العبودية",
-        "Price": "$4.00",
-        "image": ""
-      },
-      {
-        "BookTitle": "صاحب الظل الطويل",
-        "Price": "$5.00",
-        "image": ""
+        "image": "https://i.pinimg.com/736x/86/a1/bb/86a1bb2d8421b3d6dad32c06f97bc4de.jpg?b=t"
       },
       {
         "BookTitle": "سلطة التفاؤل",
         "Price": "$4.00",
+        "image": "https://images.gr-assets.com/books/1505777240l/36264792.jpg"
+      },
+      {
+        "BookTitle": "المهابهارتا",
+        "Price": "$6.00",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1544662749i/43208856._UY1271_SS1271_.jpg"
+      },
+      {
+        "BookTitle": "الكافرة",
+        "Price": "$5.00",
+        "image": "https://2.bp.blogspot.com/-CQll1o0zh-A/V0HXT6TGmgI/AAAAAAAAALY/r16QkUTQaTc8TOF1p0duhX4CGkIG7OkRQCLcB/s1600/22-36.png"
+      },
+      {
+        "BookTitle": "فلسفة حقوق الانسان",
+        "Price": "$4.00",
+        "image": "https://img1.od-cdn.com/ImageType-400/6411-1/E31/02F/A7/%7BE3102FA7-8A0C-4637-A64E-ED518532EE7E%7DImg400.jpg"
+      },
+      {
+        "BookTitle": "سيكولوجيا المراهقة",
+        "Price": "$3.50",
+        "image": "https://img1.od-cdn.com/ImageType-400/6411-1/51B/98C/80/%7B51B98C80-EF7C-4427-A7B9-8D4681E9F9D6%7DImg400.jpg"
+      },
+  
+      {
+        "BookTitle": "كافكا الاعمال القصصية",
+        "Price": "$7.00",
+        "image": "https://images.gr-assets.com/books/1390129863l/20575661.jpg"
+      },
+      {
+        "BookTitle": "فاتنة باريس",
+        "Price": "$4.00",
+        "image": "http://www.8gharb.com/wp-content/uploads/2018/10/22-84-225x300.png"
+      },
+      {
+        "BookTitle": "العبودية",
+        "Price": "$4.00",
+        "image": "https://images.gr-assets.com/books/1508022486l/35651600.jpg"
+      },
+      {
+        "BookTitle": "صاحب الظل الطويل",
+        "Price": "$5.00",
+        "image": "data:image/jpeg;base64,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"
+      },
+      {
+        "BookTitle": "سيكولوجيا المنقذ",
+        "Price": "$6.00",
         "image": ""
       },
       {
@@ -812,5 +813,4 @@ app.controller('Rafidain', ['$scope', function($scope) {
         "image": ""
       }
      ]
-  
   }]);

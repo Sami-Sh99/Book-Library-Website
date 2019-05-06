@@ -1,0 +1,16 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} ! -d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+Rewrite ^(.*)$ $1.html [NC,L]
+
+//Prevent viewing of .htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+//Prevent directory listings
+Options All -Indexes
+
+
+ 
